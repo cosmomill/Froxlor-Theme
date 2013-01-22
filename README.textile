@@ -1,6 +1,6 @@
 h1. A simple and clean theme for Froxlor.
 
-This is a fork of Froxlor-Theme that adds the ability to use it without changing Froxlor application core files. To use it, just copy the folder to your thmes themes directory.
+This is a fork of Froxlor-Theme that adds the ability to use it without changing Froxlor application core files. To use it, just copy the folder to your themes directory.
 
 "Froxlor":http://www.froxlor.org/ is a multilingual server-management-panel for Internet service providers (ISP), which want to offer a webinterface for their customers for managing e-mail-addresses, domains, FTP and more.
 
