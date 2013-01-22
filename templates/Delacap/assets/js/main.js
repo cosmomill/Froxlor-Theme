@@ -20,6 +20,21 @@ $.extend({
 
 $(document).ready(function()
 {
+	// prepare the navigation menu
+	$('#navigationMenu').prepareMenu();
+	
+	// pagination
+	$('.pagination').pagination();
+
+	// button group
+	$('label[for="account_yes"]').parent().next().buttonGroup();
+	
+	// toggle button
+	$('label[for="mail_catchall"]').parent().next().toggleButton();
+	
+	// email forwarder
+	$('label[for="mail_fwds"]').parent().next().forwarder();
+	
 	// make rel="external" links open in a new window
 	$("a[rel='external']").attr('target', '_blank');
 	

@@ -13,6 +13,9 @@
         <title><if isset($userinfo['loginname']) && $userinfo['loginname'] != ''>{$userinfo['loginname']} - </if>Froxlor Server Management Panel</title>
     </head>
     <body>
+	
+	<ul id="navigationMenu">$navigation</ul>
+	
     <if isset($userinfo['loginname'])>
     
         <div class="navbar navbar-fixed-top">
@@ -20,7 +23,12 @@
                 <div class="container">
                 	<div class="nav-collapse">
     
-                        $navigation
+                        <ul class="pull-right">
+                             <div class="btn-group">
+                             </div>
+                        </ul><!-- /class="pull-right" -->
+
+                        <ul id="topnav" class="nav">
                         </ul><!-- /id="topnav" -->
                         
                 	</div><!-- /nav-collapse -->

@@ -32,6 +32,10 @@
     <div class="modal hide fade in" id="dialogerror"></div>
     <script type="text/javascript" src="templates/Delacap/assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="templates/Delacap/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="templates/Delacap/assets/js/prepareNav.js"></script>
+	<script type="text/javascript" src="templates/Delacap/assets/js/pagination.js"></script>
+	<script type="text/javascript" src="templates/Delacap/assets/js/buttons.js"></script>
+	<script type="text/javascript" src="templates/Delacap/assets/js/forwarder.js"></script>
     <script type="text/javascript" src="templates/Delacap/assets/js/select.js"></script>
     <script type="text/javascript" src="templates/Delacap/assets/js/nav.js"></script>
     <script type="text/javascript" src="templates/Delacap/assets/js/form.js"></script>

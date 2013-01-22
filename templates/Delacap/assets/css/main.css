@@ -408,3 +408,25 @@ span.sorter.desc img
 {
 	background-position: 0 -16px;
 }
+
+#navigationMenu
+{
+	display: none;
+}
+
+#overview
+{
+	margin-top: 8px;
+}
+
+#overview:before
+{
+	left: auto;
+	right: 12px;
+}
+
+#overview:after
+{
+	left: auto;
+	right: 13px;
+}
