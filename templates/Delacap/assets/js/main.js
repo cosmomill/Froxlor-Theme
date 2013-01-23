@@ -38,6 +38,11 @@ $(document).ready(function()
 	// make rel="external" links open in a new window
 	$("a[rel='external']").attr('target', '_blank');
 	
+	// show buttons on full overview
+	if(window.location.search.indexOf('part=all') >= 0)
+	{
+		$('input.full-overview').show();
+	}
 
 	// Auto-select next field in configfile - wizard
 	$('#config_distribution').change(function (){
@@ -305,6 +310,11 @@ function bindSubmitForm(modal)
 						{
 							var page = $("input[name=page]", form).attr('value');
 								target = form.attr('action');
+							
+							if(target.indexOf('s=') == -1)
+							{
+								target = target + '?s=' + $("input[name=s]", form).attr('value') + '&page=' + page;
+							}
 							
 							if(page && target.indexOf('page=' + page) == -1)
 							{

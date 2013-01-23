@@ -430,3 +430,8 @@ span.sorter.desc img
 	left: auto;
 	right: 13px;
 }
+
+input.full-overview
+{
+	display: none;
+}
