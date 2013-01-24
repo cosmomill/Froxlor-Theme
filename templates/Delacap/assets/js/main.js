@@ -154,7 +154,7 @@ $(document).ready(function()
 			total = $(element).attr('total'),
 			w = (used != 0) ? 50 : 0;
 		
-		console.log($.isNumeric(total));
+		//console.log($.isNumeric(total));
 		if($.isNumeric(total))
 		{
 			w = Math.round((100 / total) * used);
@@ -291,38 +291,66 @@ function bindSubmitForm(modal)
 				{
 					if(statusText == 'success')
 					{
-						if(response.indexOf('dc="dialog"') >= 1)
+						switch (true)
 						{
-							$('#dialogerror').html(response).modal({
-								backdrop: true,
-								show: true
-							});
-							
-							if(modal)
-							{
-								$('#dialogmodal').modal('hide');
-								$('#dialogerror').on('hide', function () {
+							case (response.indexOf('dc="dialog"') >= 1):
+								if(modal)
+								{
 									$('#dialogmodal').modal('show');
-								});
-							}
-						}
-						else
-						{
-							var page = $("input[name=page]", form).attr('value');
-								target = form.attr('action');
+								}
+								break;
 							
-							if(target.indexOf('s=') == -1)
-							{
-								target = target + '?s=' + $("input[name=s]", form).attr('value') + '&page=' + page;
-							}
+							case (response.indexOf('dc="dialogerror"') >= 1):
+								$(".notifications").notify({
+									message: { text: $("p", $(response)).text() },
+									type: 'danger',
+									fadeOut: { enabled: false }
+								}).show();
+								break;
+								
+							case (response.indexOf('dc="dialogsuccess"') >= 1):
+								$(".notifications").notify({
+									message: { text: $("a", $(response)).text() },
+									type: 'success',
+									fadeOut: { enabled: true, delay: 1000 },
+									onClosed: function(){window.location.href = $("a", $(response)).attr('href')}
+								}).show();
+								break;
 							
-							if(page && target.indexOf('page=' + page) == -1)
-							{
-								target = target + '&page=' + page;
-							}
-							
-							window.location.href = target;
-						}
+							case (response.indexOf('<head>') >= 1):
+								window.history.back();
+								break;
+								
+							default:
+								var page = $("input[name=page]", form).attr('value');
+								var target = form.attr('action');
+								var action = $("input[name=action]", form).attr('value');
+								var id = $("input[name=id]", form).attr('value');
+								
+								if(target.indexOf('s=') == -1)
+								{
+									target = target + '?s=' + $("input[name=s]", form).attr('value') + '&page=' + page;
+								}
+								
+								if(page && target.indexOf('page=' + page) == -1)
+								{
+									target = target + '&page=' + page;
+								}
+								
+								if(typeof(action) != 'undefined')
+								{
+									target = target + '&action=' + action;
+								}
+								
+								if(typeof(id) != 'undefined')
+								{
+									target = target + '&id=' + id;
+								}
+								
+								window.location.href = target;
+								
+								break;
+						};
 					}
 				}
 				});

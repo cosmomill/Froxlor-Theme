@@ -29,9 +29,10 @@
         </div>
     </div>
     <div class="modal hide fade in" id="dialogmodal"></div>
-    <div class="modal hide fade in" id="dialogerror"></div>
+    <div class="notifications"></div>
     <script type="text/javascript" src="templates/Delacap/assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="templates/Delacap/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="templates/Delacap/assets/bootstrap/js/bootstrap-notify.js"></script>
     <script type="text/javascript" src="templates/Delacap/assets/js/prepareNav.js"></script>
 	<script type="text/javascript" src="templates/Delacap/assets/js/pagination.js"></script>
 	<script type="text/javascript" src="templates/Delacap/assets/js/buttons.js"></script>

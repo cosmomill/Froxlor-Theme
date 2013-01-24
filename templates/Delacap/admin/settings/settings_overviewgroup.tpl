@@ -5,7 +5,7 @@
 	<td>{$option}</td>
 	<td>
 		<if $activated == 1>
-			<a href="$filename?page=overview&amp;part=$part&amp;s=$s">{$lng['admin']['configfiles']['serverconfiguration']}</a>
+			<a class="btn btn-mini" alt="{$lng['admin']['configfiles']['serverconfiguration']}" href="$filename?page=overview&amp;part=$part&amp;s=$s"><i class="icon-pencil"></i></a>
 		</if>
 	</td>
 </tr>

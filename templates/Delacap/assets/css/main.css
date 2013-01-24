@@ -435,3 +435,17 @@ input.full-overview
 {
 	display: none;
 }
+
+.notifications 
+{
+	position: fixed;
+	right: 10px;
+	top: 25px;
+}
+
+.notifications > div 
+{
+	position: relative;
+	z-index: 9999;
+	margin: 5px 0px;
+}
