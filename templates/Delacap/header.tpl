@@ -14,7 +14,7 @@
     </head>
     <body>
 	
-	<ul id="navigationMenu">$navigation</ul>
+	<ul id="navigationMenu"><if isset($navigation)>{$navigation}</if></ul>
 	
     <if isset($userinfo['loginname'])>
     
