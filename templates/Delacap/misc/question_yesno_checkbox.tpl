@@ -1,4 +1,4 @@
-<form class="nomargin" action="$yesfile" method="post">
+<form rel="submit" class="nomargin" action="$yesfile" method="post" enctype="application/x-www-form-urlencoded">
     <input type="hidden" name="s" value="$s" />
     <input type="hidden" name="send" value="send" />
     {$hiddenparams}

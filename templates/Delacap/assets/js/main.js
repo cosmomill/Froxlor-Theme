@@ -59,7 +59,11 @@ $(document).ready(function()
 	$('#yesnobutton').click(function() {
 		history.back();
 	});
-
+	
+	// close modal dialog on submit
+	$('#dialogmodal input:submit').live("click", function() {
+		$('#dialogmodal').modal('hide');
+	});
 
 	// domainSpecialDialog (see 0.9.27-rc1) greetings from James Bond
 	var domainSpecialDialog = $('#speciallogwarningpopup').modal({
