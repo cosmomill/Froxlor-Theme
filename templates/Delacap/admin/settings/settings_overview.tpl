@@ -1,7 +1,7 @@
 <article>
     <header>
         <h2>
-            {$lng['admin']['configfiles']['serverconfiguration']}
+            {$lng['admin']['serversettings']}
         </h2>
     </header>
     

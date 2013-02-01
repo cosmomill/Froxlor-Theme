@@ -3,16 +3,16 @@ $header
 		<header>
 			<h2>
 				{$lng['admin']['configfiles']['serverconfiguration']} &nbsp;
-				[<a href="{$linker->getLink(array('section' => 'configfiles', 'page' => 'overview'))}">{$lng['admin']['configfiles']['overview']}</a>]
 			</h2>
 		</header>
+		
+		<div class="overviewadd">
+           <a class="btn btn-success" href="{$linker->getLink(array('section' => 'configfiles', 'page' => 'overview'))}">{$lng['admin']['configfiles']['overview']}</a>
+		</div>
 
 		<section>
 			<form action="$filename" method="get" enctype="application/x-www-form-urlencoded">
 			<fieldset>
-            <!--
-					<legend>Froxlor&nbsp;-&nbsp;Wizard</legend>
-                    -->
 						<input type="hidden" name="s" value="$s" />
 						<input type="hidden" name="page" value="$page" />
 
@@ -30,7 +30,7 @@ $header
 								<td><select id="config_daemon" name="daemon"><option value="choose">{$lng['admin']['configfiles']['choosedaemon']}</option>{$daemons_select}</select></td>
 							</tr>
 							<tr>
-								<td colspan="2"><input class="btn btn-success" type="submit" value="{$lng['panel']['next']}" /></td>
+								<td style="text-align:right;" nowrap="nowrap" colspan="2"><input class="btn btn-success" type="submit" value="{$lng['panel']['next']}" /></td>
 							</tr>
 						</table>
 			</fieldset>
