@@ -38,6 +38,38 @@ $(document).ready(function()
 	// make rel="external" links open in a new window
 	$("a[rel='external']").attr('target', '_blank');
 	
+		// tooltip
+	$('.hasTooltip').tooltip({});
+	
+	// language menu (select2)
+	function languageFlag(language)
+	{
+		if(language.text == 'Profile language')
+		{
+			return language.text;
+		}
+		else
+		{
+			return "<img class='flag' src='templates/Delacap/assets/img/flags/" + encodeURIComponent(htmlentities(language.text)) + ".png'/>" + language.text;
+		}
+	}
+	
+    $('#language').select2({
+		formatResult: languageFlag,
+		formatSelection: languageFlag,
+		escapeMarkup: function(m) { return m; }
+    });
+	
+	$('#dialogmodal').on('show', function () {
+		$('#def_language').select2({
+			formatResult: languageFlag,
+			formatSelection: languageFlag,
+			escapeMarkup: function(m) { return m; }
+		});
+		
+		$('.modal-body').css('overflow-y', 'hidden');
+	});
+	
 	// show buttons on full overview
 	if(window.location.search.indexOf('part=all') >= 0)
 	{

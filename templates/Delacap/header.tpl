@@ -8,6 +8,7 @@
             <meta name="GOOGLEBOT" content="nosnippet" />
         </if>
         <link rel="stylesheet" href="templates/Delacap/assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="templates/Delacap/assets/select2/css/select2.css">
         <link rel="stylesheet" href="templates/Delacap/assets/css/main.css">
         <link rel="icon" href="templates/Delacap/assets/img/favicon.ico" type="image/x-icon" />
         <title><if isset($userinfo['loginname']) && $userinfo['loginname'] != ''>{$userinfo['loginname']} - </if>Froxlor Server Management Panel</title>

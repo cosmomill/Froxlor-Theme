@@ -10,7 +10,7 @@
         <fieldset>
             <p>
                 <label for="def_language">{$lng['login']['language']}:</label>&nbsp;
-                <select id="def_language" name="def_language">$language_options</select>
+                <select class="sp100" id="def_language" name="def_language">$language_options</select>
             </p>
         </fieldset>
     </div>
