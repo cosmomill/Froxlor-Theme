@@ -42,15 +42,15 @@ $header
                 <div class="control-group">
                     <div class="input-prepend input-append">
                         <if $settings['panel']['allow_preset'] == '1'>
-                            <span class="add-on"><i data-placement="left" class="icon-user hasTooltip" data-original-title="{$lng['login']['username']}"></i></span><input type="text" size="15" placeholder="{$lng['login']['username']}" name="loginname" id="loginname" value="" class="input-login" tabindex="3" required/><a data-placement="right" class="btn width-auto login-help hasTooltip" href="$filename?action=forgotpwd" data-original-title="{$lng['login']['forgotpwd']}"><i title="{$lng['login']['forgotpwd']}" class="icon-question-sign"></i></a>
+                            <span data-placement="left" class="add-on hasTooltip" data-original-title="{$lng['login']['username']}"><i class="icon-user"></i></span><input type="text" size="15" placeholder="{$lng['login']['username']}" name="loginname" id="loginname" value="" class="input-login" tabindex="3" required/><a data-placement="right" class="btn width-auto login-help hasTooltip" href="$filename?action=forgotpwd" data-original-title="{$lng['login']['forgotpwd']}"><i title="{$lng['login']['forgotpwd']}" class="icon-question-sign"></i></a>
                         <else>
-                            <span class="add-on"><i data-placement="left" class="icon-user hasTooltip" data-original-title="{$lng['login']['username']}"></i></span><input type="text" size="15" placeholder="{$lng['login']['username']}" name="loginname" id="loginname" value="" class="input-login" tabindex="3" required/><a data-placement="right" class="btn width-auto login-help" href="#"><i class="icon-question-sign"></i></a>
+                            <span data-placement="left" class="add-on hasTooltip" data-original-title="{$lng['login']['username']}"><i class="icon-user"></i></span><input type="text" size="15" placeholder="{$lng['login']['username']}" name="loginname" id="loginname" value="" class="input-login" tabindex="3" required/><a data-placement="right" class="btn width-auto login-help" href="#"><i class="icon-question-sign"></i></a>
                         </if>                    
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="input-prepend input-append">
-                        <span class="add-on"><i data-placement="left" class="icon-lock hasTooltip" data-original-title="{$lng['login']['password']}"></i></span><input type="password" size="15" placeholder="{$lng['login']['password']}" name="password" id="password" class="input-login" tabindex="3" required/><button type="submit" class="btn btn-success">{$lng['login']['login']}</button>
+                        <span data-placement="left" class="add-on hasTooltip" data-original-title="{$lng['login']['password']}"><i class="icon-lock"></i></span><input type="password" size="15" placeholder="{$lng['login']['password']}" name="password" id="password" class="input-login" tabindex="3" required/><button data-placement="right" type="submit" class="btn btn-success hasTooltip" data-original-title="{$lng['login']['login']}"><i class="icon-arrow-right icon-white"></i></button>
                     </div>
                 </div>
                 <div class="clearfix">
