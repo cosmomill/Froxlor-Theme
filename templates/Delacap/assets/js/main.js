@@ -44,14 +44,12 @@ $(document).ready(function()
 	// language menu (select2)
 	function languageFlag(language)
 	{
-		if(language.text == 'Profile language')
-		{
-			return language.text;
-		}
-		else
-		{
-			return "<img class='flag' src='templates/Delacap/assets/img/flags/" + encodeURIComponent(htmlentities(language.text)) + ".png'/>" + language.text;
-		}
+		// hide missing flags
+		$("<img src='templates/Delacap/assets/img/flags/" + encodeURIComponent(htmlentities(language.text)) + ".png'/>").error(function(){
+			$("img[src='" + $(this).attr('src') + "']").hide();
+		});
+
+		return "<img class='flag' src='templates/Delacap/assets/img/flags/" + encodeURIComponent(htmlentities(language.text)) + ".png'/>" + language.text;
 	}
 	
     $('#language').select2({
